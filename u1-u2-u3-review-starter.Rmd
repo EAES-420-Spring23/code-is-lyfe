@@ -60,10 +60,30 @@ In density data frame there three rows and 2 columns. Density shows the weight o
 
 ### Exercise 3
 
-Remove this text, and add your answer for Exercise 3 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r join_mineral_properties}
+
+density%>%
+left_join(sites)
+
+```
+
+There are 23 rows in this output which is the same as the amount of rows in the sand minerals dataset. 
+
+```{r}
+sand_mineral_density <- density%>%
+left_join(sites)
+```
+
+```{r}
+sand_mineral_density %>%
+  left_join(solubility_hardness)
+
+```
+
+```{r}
+sand_mineral_properties <- sand_mineral_density %>%
+  left_join(solubility_hardness)
+```
 
 ### Exercise 4
 
