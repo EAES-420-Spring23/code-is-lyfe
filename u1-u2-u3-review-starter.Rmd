@@ -102,7 +102,7 @@ sand_mineral_properties %>%
 ```
 ```{r}
 sand_mineral_properties %>% 
-slice(1:18) 
+slice(1:18)
 
 ```
 ```{r}
