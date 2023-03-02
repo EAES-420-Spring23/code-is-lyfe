@@ -39,10 +39,24 @@ glimpse(sites) %>%
 
 ### Exercise 2
 
-Remove this text, and add your answer for Exercise 2 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r inspect-other-dataframes}
+glimpse(density)
+glimpse(solubility_hardness)
+glimpse(location_descriptions)
+
+```
+```{r}
+glimpse(density) %>% 
+  names()
+glimpse(solubility_hardness) %>% 
+  names()
+glimpse(location_descriptions) %>%
+  names()
+
+```
+
+In density data frame there three rows and 2 columns. Density shows the weight of the mineral itself. In the solubility hardness has 3 rows and columns. Hardness is based of the hardness scale. It shows what possible force can leave a mark on the mineral. The location description has 10 rows and 2 columns. Location tells you where exactly the mineral can be found. For example, one mineral can be found by water or far from.
+
 
 ### Exercise 3
 
