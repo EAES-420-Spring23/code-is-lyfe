@@ -140,16 +140,22 @@ summarize((mean(density)))
 ```{r}
 sand_mineral_properties %>%
   group_by((location))%>%
-  summarize(mean(densi))
+  summarize(mean(density))
 ```
 
 
 ### Exercise 6
+```{r}
+sites %>%
+pivot_wider(names_from= minerals, values_from = location)
+```
+```{r}
+sites %>%
+pivot_wider(names_from = minerals, values_from = location) %>% 
+  pivot_longer(1:3, names_to = "minerals", values_to= "location")
+```
 
-Remove this text, and add your answer for Exercise 6 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+
 
 ## Part II - Data Visualization
 
