@@ -116,10 +116,33 @@ sand_mineral_properties %>%
 
 ### Exercise 5
 
-Remove this text, and add your answer for Exercise 5 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r}
+sand_mineral_properties %>%
+  select(density) 
+
+```
+
+```{r}
+sand_mineral_properties %>%
+  count(minerals)
+```
+
+```{r}
+sand_mineral_properties %>%
+summarize(density_1000 = density/1000)
+```
+
+```{r}
+sand_mineral_properties %>%
+summarize((mean(density)))
+```
+
+```{r}
+sand_mineral_properties %>%
+  group_by((location))%>%
+  summarize(mean(densi))
+```
+
 
 ### Exercise 6
 
